@@ -16,13 +16,28 @@ public class PracticeController {
 	
 	@RequestMapping("/")
 	public ModelAndView index() {
-		return new ModelAndView("index", "firstPage", "Welcome to the Coffee Shop!");
+		return new ModelAndView("index", "firstPage", "Welcome to the BeanBar!");
 	}
 	
 	
 	@RequestMapping("/registration")
 	public ModelAndView regPage() {
 		return new ModelAndView("registration");
+	}
+	
+	@RequestMapping("/orderOnline")
+	public ModelAndView orderOnline() {
+		return new ModelAndView("orderOnline");
+	}
+	
+	@RequestMapping("/logIn")
+	public ModelAndView logIn() {
+		return new ModelAndView("logIn");
+	}
+	
+	@RequestMapping("/map")
+	public ModelAndView map() {
+		return new ModelAndView("map");
 	}
 	
 	@RequestMapping("formresults")
