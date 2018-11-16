@@ -44,11 +44,15 @@
 	<br>
 	<br>
 	<div class="background"></div>
-		<div class="livespace">
+		<div class="container">
+		<div class="row">
+		<div class="col-8">
 		<h4>Welcome to the BeanBar Online!</h4>
 			<h5>Please log in:</h5><br><br>
             <br><br><br>
 	<br>
+	</div>
+	</div>
 		</div>
 
 <div class="footer"></div>

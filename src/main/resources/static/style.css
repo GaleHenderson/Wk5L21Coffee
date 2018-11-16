@@ -1,24 +1,28 @@
 h4, h5, form {
-	padding-left: 50px;
+/* 	padding-left: 50px; */
 	padding-top: 50px;
 }
 
-.livespace {
-padding-left: 30px;
-column-count: 8 of 8;
+body {
+	/* background-attachment: fixed; */
+    background-position: center; 
 }
+
+/* .livespace {
+padding-left: 30px;
+} */
 
 .pun {
 	text-align: center;
 }
 
 .background {
-	padding-top: 50px;
 	background-image: url('images/double-shot2.jpg');
-	padding-right: 40px;
+	padding-top: 50%;
 	float: right; 
 	width: 500px;
     height: 450px;
+    /* background-attachment: fixed; */
     background-repeat: no-repeat;
 }
 
@@ -44,5 +48,9 @@ ol li:before {
     background-image: url('images/beanFooter2.png');
     background-size: 100% 100%;
 
+}
+
+span{
+	 font-style: italic;
 }
 	

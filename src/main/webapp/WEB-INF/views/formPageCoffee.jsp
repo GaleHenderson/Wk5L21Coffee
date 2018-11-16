@@ -36,11 +36,15 @@
   </div>
 </nav>
 <div class="background"></div>
-		<div class="livespace">
+		<div class="container">
+		<div class="row">
+		<div class="col-8">
 
 <h1>Congratulations! You are a registered BeanBar Member</h1>
 
 ${userData}
+</div>
+</div>
 </div>
 
 <script src="script.js"></script>

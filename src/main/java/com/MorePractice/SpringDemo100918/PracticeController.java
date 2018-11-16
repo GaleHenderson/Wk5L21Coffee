@@ -7,17 +7,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 
+
 @Controller
 public class PracticeController {
 	
 	@Autowired
-	private Person p;
+	PersonRepository p;
+
 	
-	
-	@RequestMapping("/")
-	public ModelAndView index() {
-		return new ModelAndView("index", "firstPage", "Welcome to the BeanBar!");
-	}
+//	@RequestMapping("/")
+//	public ModelAndView index() {
+//		return new ModelAndView("index", "firstPage", "Welcome to the BeanBar!");
+//	}
 	
 	
 	@RequestMapping("/registration")
@@ -25,10 +26,10 @@ public class PracticeController {
 		return new ModelAndView("registration");
 	}
 	
-	@RequestMapping("/orderOnline")
-	public ModelAndView orderOnline() {
-		return new ModelAndView("orderOnline");
-	}
+//	@RequestMapping("/orderOnline")
+//	public ModelAndView orderOnline() {
+//		return new ModelAndView("orderOnline");
+//	}
 	
 	@RequestMapping("/logIn")
 	public ModelAndView logIn() {
@@ -40,12 +41,28 @@ public class PracticeController {
 		return new ModelAndView("map");
 	}
 	
-	@RequestMapping("formresults")
-	public ModelAndView formTest(@RequestParam("firstname") String fname, @RequestParam("lastname") String lname) {
-		p.setFirstName(fname);
-		p.setLastName(lname);
-		String sayHello = "Hello, " + fname;
-		return new ModelAndView("formPageCoffee", "userData", p);
+	@RequestMapping("/addperson")
+	public ModelAndView addNewPerson(@RequestParam("fName") String fName, @RequestParam("lName") String lName, @RequestParam("email") String email, 
+		@RequestParam("pw") String pw, @RequestParam("phone") String phone){
+		Person p1 = new Person(fName, lName, email, pw, phone);
+		System.out.println(p1);
+		p.save(p1);
+		String sayHello = "Hello, " + fName;
+		return new ModelAndView("formPageCoffee", "userData", sayHello);
+	}		
+
+
 	
-}
+//	@RequestMapping("formresults")
+//	public ModelAndView formTest(@RequestParam("fName") String fname, @RequestParam("lName") String lname) {
+//		p.findByName(fname);
+//		//String sayHello = "Hello, " + fname;
+//		Person newPerson = new Person(fname,lname);
+//		ModelAndView mv = new ModelAndView("formresults");
+//		p.save(newPerson);
+//		mv.addObject("BeanBarMembers", p.findAll());
+//
+//		return mv;
+//	}
+	
 }

@@ -49,9 +49,11 @@
 
 	<br>
 	<br>
-	<div class="livespace">
+	<div class="container">
+		<div class="row">
+		<div class="col-9">
 		<h1>
-			Grounds for a second <br> shot at a productivity
+			<span>Grounds</span> for a double <br><br> <span>shot</span> at a productivity
 		</h1>
 		<br>
 		<br>
@@ -60,6 +62,10 @@
 			<li><a href="logIn">Log Into Account</a></li><br>
 			<li><a href="map">Find a Location</a></li><br>
 		</ol>
+		
+		
+		</div>
+		</div>
 	</div>
 
 	<!-- <img src="images/double-shot2.jpg" class="baseimg"> -->

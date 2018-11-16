@@ -38,18 +38,20 @@
 <br>
 	<br>
 <div class="background"></div>
-		<div class="livespace">
+		<div class="container">
+		<div class="row">
+		<div class="col-9">
 
 <h4>Welcome to the Registration Page!</h4>
 <h5>Please complete the following form:</h5>
 
-<form action="formresults" onsubmit="return validateInfo();">
-First Name: <input id="firstname" type="text" name="firstname"> 
-Last Name: <input id="lastname" type="text" name="lastname"> <br><br>
-Primary Phone: <input id="phone" type="text" name="phone" pattern="[1-9]{3}-[1-9]{3}-[1-9]{4}" title="XXX-XXX-XXXX"> 
+<form action="addperson" onsubmit="return validateInfo();" method="post">
+First Name: <input id="firstname" type="text" name="fName">  <br><br>
+Last Name: <input id="lastname" type="text" name="lName"> <br><br>
 Email: <input id="email" type="email" name="email"> <br><br>
-Password: <input id="pw" type="password" name="password"> 
+Password: <input id="pw" type="password" name="pw">  <br><br>
 Confirm Password: <input id="confirm" type="password" name="password"> <br><br>
+Primary Phone: <input id="phone" type="text" name="phone" pattern="[1-9]{3}-[1-9]{3}-[1-9]{4}" title="XXX-XXX-XXXX">  <br><br>
 Birthdate: <input id="bday" type="date" name="DOB" pattern="[1-12]{2}-[1-31]{2}-[1-1920]{4}" title="MM-DD-YYYY"> <br><br>
 Coffee Preferences: <br>
 <input type="checkbox" name="coffee" value="Decaf"> Decaf <br>
@@ -93,6 +95,8 @@ Coffee Strength Preferences: <br>
 <input type="radio" name="gender" value="other"> Other <br>
 <input type="submit" value="Submit">
 </form> -->
+</div>
+</div>
 </div>
 <div class="footer"></div>
 <script src="script.js"></script>

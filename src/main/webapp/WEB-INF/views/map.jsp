@@ -44,7 +44,9 @@
 	<br>
 	<br>
 	<div class="background"></div>
-		<div class="livespace">
+		<div class="container">
+		<div class="row">
+		<div class="col-9">
 		<h4>Locations!</h4>
 			<br><br>
 			<div>
@@ -65,6 +67,8 @@
 			
             <br><br><br>
 	<br>
+		</div>
+		</div>
 		</div>
 		</div>
 

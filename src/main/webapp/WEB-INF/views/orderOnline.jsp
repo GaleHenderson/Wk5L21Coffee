@@ -44,13 +44,32 @@
 	<br>
 	<br>
 	<div class="background"></div>
-		<div class="livespace">
+	
+	
+		<div class="container">
+		<div class="row">
+		<div class="col-8">
+${Items}
 
-
-			<h4>Welcome to the BeanBar Online!</h4>
-			<h5>Please complete your order below:</h5><br><br>
+			<h3>Welcome to the BeanBar Online!</h3>
+			<h4>Please complete your order below:</h4><br><br>
             
-
+            <h5>Current Inventory:</h5>
+		<table class="table">
+			<c:forEach var="b" items="${inventorylist}">
+				<tr>
+					<!-- <tr> = table row <td> = table data -->
+					<td>${b.itemid}</td>
+					<td>${b.itemname}</td>
+					<td>${b.description}</td>
+					<td>${b.price}</td>
+					<td><a class="btn btn-primary" href="/addToCart?itemid=${b.itemid} ">Add to Cart</a></td>
+					
+				</tr>
+			</c:forEach>
+		</table>
+		</div>
+</div>
 		</div>
 
 	<script src="script.js"></script>
